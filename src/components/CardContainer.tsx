@@ -27,6 +27,7 @@ const CardContainer = ({ data, loading, error }: CardContainerProps) => {
           name={name}
           status={status}
           elevationGain={elevationGain}
+          isLift
         />
       ))}
     </>

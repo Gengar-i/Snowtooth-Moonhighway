@@ -7,6 +7,7 @@ import ModalCard from "./ModalCard";
 
 type ModalTypes = DrawerProps & {
   liftId: string;
+  onClose: () => void;
 };
 
 const Modal = ({ liftId, anchor, open, onClose }: ModalTypes) => {
@@ -21,14 +22,14 @@ const Modal = ({ liftId, anchor, open, onClose }: ModalTypes) => {
       return <Error error={error} />;
     }
     if (data && data.Lift) {
-      return <ModalCard data={data} onClose={onClose} />;
+      return <ModalCard lift={data.Lift} onClose={onClose} />;
     }
 
     return null;
   };
 
   return (
-    <Drawer className="sw-modal" anchor={anchor} open={open} onClose={onClose}>
+    <Drawer className="sm-modal" anchor={anchor} open={open} onClose={onClose}>
       {renderContent()}
     </Drawer>
   );

@@ -6,7 +6,7 @@ import CardContainer from "./CardContainer";
 import Modal from "./Modal";
 import Filter from "./Filter";
 import { LiftStatus } from "./Card";
-import { LIFTS_STATUS } from "../helpers";
+import { LIFTS_STATUS } from "../helpers/helpers";
 
 export type LiftsStatus = LiftStatus | "ALL";
 
@@ -53,7 +53,7 @@ const Main = () => {
         <div className="sm-main__container">
           <div className="sm-main__headline">
             <h2 className="sm-main__title">Lifts</h2>
-            <Filter withAll={true} setStatus={setStatus} status={status} />
+            <Filter setStatus={setStatus} status={status} />
           </div>
           <div className="sm-main__card-container">
             <CardContainer data={data} loading={loading} error={error} />

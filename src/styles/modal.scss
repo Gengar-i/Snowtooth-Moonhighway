@@ -1,3 +1,9 @@
-.sw-modal .MuiDrawer-paper {
+.sm-modal .MuiDrawer-paper {
   min-width: 500px;
+}
+
+@media (max-width: 600px) {
+  .sm-modal .MuiDrawer-paper {
+    min-width: 200px;
+  }
 }

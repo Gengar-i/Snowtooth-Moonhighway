@@ -9,11 +9,9 @@
   --blue-200: #87ceeb;
   --blue-300: #7ac1e4;
   --blue-400: #11beda;
-  --orange-100: #ffa500;
-  --green-100: #228b2270;
-  --brown-100: #8b4513;
-
+  --red-200: #d32f2f;
   --font-color: #555;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -24,7 +22,7 @@
 body {
   color: var(--font-color);
   background-color: var(--white);
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.5;
   font-weight: 400;
   margin: 0;

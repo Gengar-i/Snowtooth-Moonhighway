@@ -30,30 +30,30 @@ const Card = ({
       })
     );
   };
-  const cardClass = cn("sw-card", {
-    "sw-card-lift": isLift,
-    "sw-card-trail": !isLift,
+  const cardClass = cn("sm-card", {
+    "sm-card-lift": isLift,
+    "sm-card-trail": !isLift,
   });
 
   return (
     <CardMui id={id} className={cardClass} sx={{ minWidth: 500 }}>
-      <CardContent className="sw-card__content">
-        <div className="sw-card__headline">
+      <CardContent className="sm-card__content">
+        <div className="sm-card__headline">
           <Tooltip placement="bottom-start" title={name}>
-            <div className="sw-card__name">{name}</div>
+            <div className="sm-card__name">{name}</div>
           </Tooltip>
           {elevationGain && (
-            <div className="sw-card__elevation">
+            <div className="sm-card__elevation">
               {`Elevation: `}
-              <span className="sw-card__elevation-value">{elevationGain}</span>
+              <span className="sm-card__elevation-value">{elevationGain}</span>
             </div>
           )}
         </div>
-        <div className="sw-card__status">{status.toLowerCase()}</div>
+        <div className="sm-card__status">{status.toLowerCase()}</div>
         {isLift && (
           <Button
             onClick={handleModalOpen}
-            className="sw-card__edit"
+            className="sm-card__edit"
             size="small"
           >
             Edit

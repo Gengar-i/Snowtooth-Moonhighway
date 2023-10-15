@@ -7,9 +7,9 @@ type TrailContainerProps = {
 
 const TrailContainer = ({ data }: TrailContainerProps) => {
   return (
-    <div className="sw-trail-container">
+    <div className="sm-trail-container">
       {data.map(({ id, name, status }: TrailProps) => (
-        <Card key={id} id={id} name={name} status={status} isLift={false} />
+        <Card key={id} id={id} name={name} status={status} />
       ))}
     </div>
   );
