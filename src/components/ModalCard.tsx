@@ -1,8 +1,8 @@
 import { useState, useCallback } from "react";
-import { Button } from "@mui/material";
-import { DrawerProps } from "@mui/material";
-import { LiftProps } from "./Card";
-import { LiftStatus } from "./Card";
+import { Button, DrawerProps } from "@mui/material";
+import { useMutation } from "@apollo/client";
+import { SET_LIFT_STATUS } from "../queries";
+import { LiftProps, LiftStatus } from "./Card";
 import Filter from "./Filter";
 import TrailContainer from "./TrailContainer";
 
@@ -32,7 +32,18 @@ const ModalCard = ({ data, onClose }: ModalProps) => {
     trailAccess,
   } = data.Lift;
   const [status, setStatus] = useState<LiftStatus>(liftStatus);
-  const handleOnClick = useCallback(() => {}, []);
+  const [setLiftStatus] = useMutation(SET_LIFT_STATUS);
+  const handleOnClick = useCallback(async () => {
+    try {
+      const { data } = await setLiftStatus({
+        variables: { id: id, status: status },
+      });
+
+      console.log(data);
+    } catch (error) {
+      console.error("Error setting lift status", error);
+    }
+  }, [id, status, setLiftStatus]);
 
   return (
     <div id={id} className="sw-modal-card">
