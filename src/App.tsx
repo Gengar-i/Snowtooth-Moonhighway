@@ -1,21 +1,13 @@
-import { useQuery } from "@apollo/client";
-import { GET_ALL_LIFTS } from "./queries";
-import List from "./components/List";
-import "./App.css";
+import Main from "./components/Main";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-const App = () => {
-  const { data, loading, error } = useQuery(GET_ALL_LIFTS);
-
-  console.log(data, loading, error);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return (
-    <>
-      <List />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Header />
+    <Main />
+    <Footer />
+  </>
+);
 
 export default App;

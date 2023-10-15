@@ -1,0 +1,10 @@
+import "./main.scss";
+import "./footer.scss";
+import "./header.scss";
+import "./index.scss";
+import "./background.scss";
+import "./card.scss";
+import "./filter.scss";
+import "./modal.scss";
+import "./modal-card.scss";
+import "./trail-container.scss";

@@ -1,0 +1,42 @@
+.sw-card {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content.MuiCardContent-root {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 16px 25px;
+  }
+
+  &__name,
+  &__elevation,
+  &__status {
+    color: var(--font-color);
+  }
+
+  &__elevation {
+    white-space: nowrap;
+  }
+
+  &__elevation-value {
+    font-weight: 500;
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status {
+    text-transform: capitalize;
+  }
+}
+
+.sw-card.sw-card-trail .sw-card__content.MuiCardContent-root {
+  grid-template-columns: 2fr 1fr;
+}

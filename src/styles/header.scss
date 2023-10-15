@@ -1,0 +1,13 @@
+.sm-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--blue-200);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  &__title {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  --white: #fff;
+  --gray-100: #ceeaf6;
+  --gray-200: #f1f7ed;
+  --gray-300: #e5dfea;
+  --gray-400: #808080;
+  --gray-500: #555;
+  --blue-100: #b4ddf0;
+  --blue-200: #87ceeb;
+  --blue-300: #7ac1e4;
+  --blue-400: #11beda;
+  --orange-100: #ffa500;
+  --green-100: #228b2270;
+  --brown-100: #8b4513;
+
+  --font-color: #555;
+}
+
+* {
+  margin: initial;
+  padding: initial;
+}
+
+body {
+  color: var(--font-color);
+  background-color: var(--white);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+}
+
+#sm-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

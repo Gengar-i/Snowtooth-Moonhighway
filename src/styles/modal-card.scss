@@ -1,0 +1,41 @@
+.sw-modal-card {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  &__headline {
+    color: var(--gray-500);
+    margin-bottom: 10px;
+  }
+
+  &__elevation {
+    color: var(--gray-500);
+    font-family: "Roboto";
+    margin-bottom: 40px;
+  }
+
+  &__trail-list {
+    color: var(--gray-500);
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  &__trail-headline {
+    margin: 0 10px 10px;
+    text-align: center;
+  }
+
+  &__btsn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20;
+
+    button {
+      margin: 10px 20px;
+    }
+  }
+}
