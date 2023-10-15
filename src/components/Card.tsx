@@ -17,7 +17,7 @@ export type CustomParams = {
 };
 
 const Card = ({
-  isLift = true,
+  isLift = false,
   id,
   name,
   status,
