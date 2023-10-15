@@ -2,8 +2,11 @@
 
 This application works with Vite, React and Typescript.
 
-You can check list of Lifts (including name, elevation gain, status) and also change status of them.
-In modal where you change status of Lift you can also see list of available Trails.
+With this application you can:
+
+- Check list of Lifts (including name, elevation gain, status)
+- Filter list of Lifts by status.
+- Open modal with form where you can update status of desired Lift.
 
 Dependencies used in this project:
 
@@ -11,3 +14,5 @@ Dependencies used in this project:
 - Apollo Client
 - React-hook-form
 - Material UI
+
+I encourage to check helpers.ts file where LIFT_EDITABLE_VALUES contain config for Form.
